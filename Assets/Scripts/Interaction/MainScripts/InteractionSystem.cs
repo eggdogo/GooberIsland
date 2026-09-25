@@ -85,7 +85,7 @@ public class InteractionSystem : MonoBehaviour
                 }
 
                 icon.texture = icons[0];
-                
+
                 textToShow = interactable.interactionText;
                 showUI = true;
 
@@ -103,7 +103,7 @@ public class InteractionSystem : MonoBehaviour
                     }
                 }
             }
-            
+
             if (hasGrabbable)
             {
                 if (!showedPrompt) {
@@ -112,7 +112,7 @@ public class InteractionSystem : MonoBehaviour
                     PlayerPrefs.SetInt("InteractionPrompt", 1);
                     PlayerPrefs.Save();
                 }
-                
+
                 if (grabbing || !hasInteractable)
                 {
                     textToShow = grabbable.interactionText;
@@ -200,7 +200,7 @@ public class InteractionSystem : MonoBehaviour
                     soundPlayer.PlayOneShot(sounds[1]);
 
                     currentGrabable.interacting = false;
-                    
+
                     grabbableObj.GetComponent<PhotonView>().RPC("stash", RpcTarget.All);
                     grabbing = false;
                     grabbableObj.transform.SetParent(player.transform);
@@ -230,20 +230,31 @@ public class InteractionSystem : MonoBehaviour
             }
         }
 
-        if (!grabbing && stashed && !stashDebounce)
+        if (!grabbing && stashed && !stashDebounce && stashedObj != null)
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                GameObject grabbableObj = currentGrabable.gameObject;
                 Debug.Log("unstashed object");
                 stashedObj.transform.parent = null;
-                grabbableObj.GetComponent<PhotonView>().RPC("unstash", RpcTarget.All, endPos.position.x, endPos.position.y, endPos.position.z);
+                PhotonView pv = stashedObj.GetComponent<PhotonView>();
+                if (pv != null)
+                {
+                    pv.RPC("unstash", RpcTarget.All, endPos.position.x, endPos.position.y, endPos.position.z);
+                }
+                else
+                {
+                    stashedObj.SetActive(true);
+                    stashedObj.transform.position = new Vector3(endPos.position.x, endPos.position.y, endPos.position.z);
+                }
+                stashedObj = null;
                 stashed = false;
                 stashDebounce = true;
 
-                stashText.text= "Nothing Stashed";
+                if (stashText != null)
+                    stashText.text = "Nothing Stashed";
 
-                soundPlayer.PlayOneShot(sounds[0]);
+                if (soundPlayer != null && sounds.Length > 0 && sounds[0] != null)
+                    soundPlayer.PlayOneShot(sounds[0]);
 
                 StartCoroutine(stashDebouncer());
             }

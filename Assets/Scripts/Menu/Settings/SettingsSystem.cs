@@ -5,7 +5,6 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
-using UnityEditor;
 
 public class SettingsSystem : MonoBehaviour
 {
