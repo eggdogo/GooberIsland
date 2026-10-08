@@ -194105,6 +194105,7 @@ MonoBehaviour:
   defualtls: {fileID: 2110912056}
   listener: {fileID: 1291329697}
   music: {fileID: 1291329696}
+  paused: 0
 --- !u!1 &448829866
 GameObject:
   m_ObjectHideFlags: 0
@@ -930197,6 +930198,8 @@ MonoBehaviour:
   endPos: {fileID: 12015465}
   interactionUI: {fileID: 404035824}
   iText: {fileID: 2001256710}
+  icon: {fileID: 0}
+  icons: []
   cm: {fileID: 0}
   grabbing: 0
   stashedObj: {fileID: 0}
