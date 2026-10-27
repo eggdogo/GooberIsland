@@ -15,26 +15,26 @@ public class RandomRadio : MonoBehaviour
 
     public void Choose()
     {
-        int chance = Random.Range(1, 10);
+        int chance = Random.Range(1, 12);
 
-        if (chance == 1 || chance == 2 || chance == 3 || chance == 4 || chance == 5){
+        if (chance == 1 || chance == 2 || chance == 3 || chance == 4 || chance == 5 || chance == 6 || chance == 7){
             audioSourse.clip = sunset;
             audioSourse.Play();
         }
-        if (chance == 6){
+        if (chance == 8){
             audioSourse.clip = chow;
             audioSourse.Play();
         }
-        if (chance == 7){
+        if (chance == 9){
             audioSourse.clip = p2Radio;
             audioSourse.Play();
         }
-        if (chance == 8)
+        if (chance == 10)
         {
             audioSourse.clip = complment;
             audioSourse.Play();
         }
-        if (chance == 9)
+        if (chance == 11)
         {
             audioSourse.clip = story;
             audioSourse.Play();
