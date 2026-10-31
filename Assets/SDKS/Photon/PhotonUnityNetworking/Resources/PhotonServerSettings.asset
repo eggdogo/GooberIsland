@@ -45,7 +45,6 @@ MonoBehaviour:
   - sendUsername
   - setColor
   - setHat
-  - kofiTag
   - ready
   - startGame
   - unready

@@ -33,8 +33,6 @@ public class StartingScreens : MonoBehaviour
     [Header("What are screens on")]
     public screen screenOn = screen.Epilepsy;
 
-    public PlayfabManager pm;
-
     public bool introSkipped;
 
     bool fade = false;
@@ -148,7 +146,6 @@ public class StartingScreens : MonoBehaviour
     public void GoToIntro()
     {
         screenOn = screen.Intro;
-        pm.Login();
         warning.SetActive(false);
         privacy.SetActive(false);
         intro.SetActive(true);
@@ -160,7 +157,6 @@ public class StartingScreens : MonoBehaviour
     public void GoToIntroPriv()
     {
         PlayerPrefs.SetInt("privAcceptNew", 1);
-        pm.Login();
         screenOn = screen.Intro;
         warning.SetActive(false);
         privacy.SetActive(false);

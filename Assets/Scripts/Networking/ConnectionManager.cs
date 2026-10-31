@@ -143,8 +143,6 @@ public class ConnectionManager : MonoBehaviourPunCallbacks
         playerObject.GetComponent<PhotonView>().RPC("sendUsername", RpcTarget.AllBuffered);
         playerObject.GetComponent<PhotonView>().RPC("setColor", RpcTarget.AllBuffered, PlayerPrefs.GetInt("clr"));
         playerObject.GetComponent<PhotonView>().RPC("setHat", RpcTarget.AllBuffered, PlayerPrefs.GetInt("hat"));
-        if (InterSceneDataKeeper.Instance.iskofi)
-            playerObject.GetComponent<PhotonView>().RPC("kofiTag", RpcTarget.AllBuffered);
         GameObject.FindGameObjectWithTag("PreviewCamera").SetActive(false);
         GameObject.Find("CameraHolder").transform.GetChild(0).gameObject.SetActive(true);
         GameObject.Find("CameraHolder").GetComponent<MoveCamera>().enabled = true;

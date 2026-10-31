@@ -156,7 +156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   username: {fileID: 5073661525969181866}
-  kfont: {fileID: 11400000, guid: d60c160edad77a86b8ce0d898e49d0aa, type: 2}
 --- !u!114 &8504532530969990640
 MonoBehaviour:
   m_ObjectHideFlags: 0

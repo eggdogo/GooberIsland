@@ -9,7 +9,6 @@ public class NamingSystem : MonoBehaviourPunCallbacks
 {
     [Header("Refrences")]
     public TextMeshPro username;
-    public TMP_FontAsset kfont;
 
     [PunRPC]
     public void sendUsername()
@@ -17,9 +16,4 @@ public class NamingSystem : MonoBehaviourPunCallbacks
         username.text = InterSceneDataKeeper.Instance.playerName;
     }
 
-    [PunRPC]
-    public void kofiTag()
-    {
-        username.font = kfont;
-    }
 }

@@ -3830,7 +3830,6 @@ MonoBehaviour:
   roomCode: 
   playerName: 
   cosmeticId: 0
-  iskofi: 0
   maxplayers: 4
   canWearCosmetics: 1
   currentSong: {fileID: 0}
@@ -4815,6 +4814,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1236586038}
+  - {fileID: 1439813204}
   - {fileID: 1519958982}
   - {fileID: 1022155210}
   - {fileID: 482683663}
@@ -5764,7 +5764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 245, y: -235}
+  m_AnchoredPosition: {x: 725, y: -235}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380766481
@@ -10579,21 +10579,26 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'it is the spooky month!
-
-    just wanted to push something for the spooky
-    month, after this, progress on b10 will progress and all will be well.
-
-    a
-    few changes that were made in b10 are also in here!
+  m_text: 'hello! heres a small little patch to fix all the stuff in the game that
+    kinda broke with last update.
 
 
-    - everything is spooky.
-    ooooooooooooo
+    - made it so u can spin the goober in cosmetics
+    menu
 
-    - new hats :0
+    - playfab has been fully removed from the game. if anything is broken
+    cuz of this tell me, but i think i patched everything?
 
-    - new music yay'
+    ----- fixes -----
+
+    -
+    pumpkin hat should work
+
+    - fixed grabbables being way heavier then they are
+    ever suppose to be
+
+    - fixed the weird black background behind the goober
+    in cosmetics menu by just added a black background behind the entire thing :P'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0f3d3162129a6549b80784e439c5b0c, type: 2}
   m_sharedMaterial: {fileID: -5223415700110494042, guid: e0f3d3162129a6549b80784e439c5b0c,
@@ -12401,7 +12406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 245, y: -235}
+  m_AnchoredPosition: {x: 85, y: -385}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845795327
@@ -13208,7 +13213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 245, y: -235}
+  m_AnchoredPosition: {x: 565, y: -235}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &884628223
@@ -14544,7 +14549,7 @@ Camera:
   m_GameObject: {fileID: 1012115728}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -14574,7 +14579,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 544
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: ae75852ea0946904ebb210d9c19ad784, type: 2}
   m_TargetDisplay: 0
@@ -16003,7 +16008,6 @@ RectTransform:
   - {fileID: 1672431132}
   - {fileID: 1061155533}
   - {fileID: 1221932985}
-  - {fileID: 2067564316}
   m_Father: {fileID: 218440110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -19680,7 +19684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 245, y: -235}
+  m_AnchoredPosition: {x: 405, y: -235}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413357279
@@ -19967,6 +19971,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431379711}
+  m_CullTransparentMesh: 1
+--- !u!1 &1439813203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1439813204}
+  - component: {fileID: 1439813206}
+  - component: {fileID: 1439813205}
+  m_Layer: 5
+  m_Name: Panel (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1439813204
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439813203}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 19.711, y: 19.711, z: 19.711}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 323773532}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -672.93, y: -192.6}
+  m_SizeDelta: {x: -1048.7, y: -363.68}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1439813205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439813203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 212.6
+--- !u!222 &1439813206
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439813203}
   m_CullTransparentMesh: 1
 --- !u!1 &1442262286
 GameObject:
@@ -22892,6 +22971,7 @@ GameObject:
   - component: {fileID: 1692155524}
   - component: {fileID: 1692155526}
   - component: {fileID: 1692155525}
+  - component: {fileID: 1692155527}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -22953,6 +23033,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692155523}
   m_CullTransparentMesh: 1
+--- !u!114 &1692155527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692155523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db66b36220bf76c45bf98202598bc160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 727479419}
+  rotationSpeed: 0.5
+  inertiaDamping: 5
+  minimumInertiaSpeed: 30
 --- !u!1 &1699736635
 GameObject:
   m_ObjectHideFlags: 0
@@ -25738,62 +25834,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953672028}
   m_CullTransparentMesh: 1
---- !u!1 &1964602097
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1964602099}
-  - component: {fileID: 1964602098}
-  m_Layer: 0
-  m_Name: PlayfabManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1964602098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964602097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f88643dcd7a4eea9ff68bf13486b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playfabId: {fileID: 2067564318}
-  playerName: 
-  kofiColor: {fileID: 518179568}
-  kofiCosmetic: {fileID: 878762059}
-  nameField: {fileID: 1998739985}
-  artRawImages:
-  - {fileID: 1851143590}
-  - {fileID: 1134449901}
-  - {fileID: 1357515160}
-  bannedMenu: {fileID: 0}
-  intro: {fileID: 2109437252}
-  banTimeText: {fileID: 0}
---- !u!4 &1964602099
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964602097}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 244.25735, y: 20.96176, z: -908.42725}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1970238229
 GameObject:
   m_ObjectHideFlags: 0
@@ -26235,19 +26275,7 @@ MonoBehaviour:
   m_CharacterLimit: 20
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1964602098}
-        m_TargetAssemblyTypeName: PlayfabManager, Assembly-CSharp
-        m_MethodName: submitPlayerName
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -26691,33 +26719,22 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Last updated: Novemeber 27th, 2025\n\r\n1. DEFINITIONS 2. DATA COLLECTION
     3. USE OF DATA 4. CHILDREN\u2019S INFORMATION 5. OTHER PROVISIONS 6. CONTACT
-    US\r\n\r\nDEFINITIONS: \"hardware ID\": A string that uniquely and consistently
-    identifies a given specific machine or device. \n\"IP address\" and \"IP\": Unique
-    string of characters that your device uses to send Internet Protocols. \n\"PC/Computer\":
-    The device you are running the game on. \"I\", \"we\", \"us\", \"our\", \"Egg
-    Studios\": The developer(s). \"services\", \"game\": Games/services developed
-    and published by Egg Studios\r\n\r\n2. DATA COLLECTION A. Hardware ID Your hardware
-    ID gets collected by PlayFab to log into your PlayFab/Goober Island account.
-    B. IP Address Your IP address gets stored on your PlayFab/Goober Island account.
-    C. Removal of PlayFab/Goober Island account If you are unhappy with the data
-    collected and you want your account and all data tied to you deleted, you may
-    contact us as described in Section 6 below.\r\n\r\n3. USE OF DATA We use your
-    information for a variety of business purposes, including to provide our Services,
-    and for administrative/moderation purposes, as described below. A: IP Address
-    As stated in Section 2A, your IP address gets stored on your PlayFab/Goober Island
-    account and is only be used for IP bans and other moderation purposes. B: Third-party
-    services We do not have any control over our third-party services, if you are
-    interested in knowing more information please read the privacy policy for our
-    third-party services listed bellow: PlayFab - https://playfab.com/terms/ Photon
-    - https://dashboard.photonengine.com/en/Account/PrivacyAndCookiePolicy This section
-    will be updated as more services get added to our game(s).\r\n\r\n4. CHILDREN\u2019S
-    INFORMATION The Services are not directed to children under 13 (or other age
-    as required by local law), and we do not knowingly collect personal information
-    from children. If you are a parent or guardian and wish to review information
-    collected from your child, or have that information modified or deleted, you
-    may contact us as described in Section 6 below. If we become aware that a child
-    has provided us with personal information in violation of applicable law, we
-    will delete any personal information we have collected, unless we have a legal
+    US\r\n\r\nDEFINITIONS: \"IP address\" and \"IP\": Unique string of characters
+    that your device uses to send Internet Protocols. \n\"PC/Computer\": The device
+    you are running the game on. \"I\", \"we\", \"us\", \"our\", \"Egg Studios\":
+    The developer(s). \"services\", \"game\": Games/services developed and published
+    by Egg Studios\r\n\r\n2. DATA COLLECTION Player names are stored locally on your
+    device.\r\n\r\n3. USE OF DATA We use your information to provide the game and
+    its multiplayer features. Player names are displayed to other players. Third-party
+    services are provided by Photon: https://dashboard.photonengine.com/en/Account/PrivacyAndCookiePolicy.
+    This section will be updated as more services get added to our game(s).\r\n\r\n4.
+    CHILDREN\u2019S INFORMATION The Services are not directed to children under 13
+    (or other age as required by local law), and we do not knowingly collect personal
+    information from children. If you are a parent or guardian and wish to review
+    information collected from your child, or have that information modified or deleted,
+    you may contact us as described in Section 6 below. If we become aware that a
+    child has provided us with personal information in violation of applicable law,
+    we will delete any personal information we have collected, unless we have a legal
     obligation to keep it, and terminate the child\u2019s account and/or revert them
     to the underage experience, as applicable.\r\n\r\n5. OTHER PROVISIONS Third-Party
     Websites/Applications. The Services may contain links to other websites/applications
@@ -27170,141 +27187,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5a4bc2ea68a5a641988b5b9f5a146a5, type: 3}
---- !u!1 &2067564315
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2067564316}
-  - component: {fileID: 2067564317}
-  - component: {fileID: 2067564318}
-  m_Layer: 5
-  m_Name: PlayFab ID
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &2067564316
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067564315}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.82, y: 1.82, z: 1.82}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1141025339}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1209, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2067564317
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067564315}
-  m_CullTransparentMesh: 1
---- !u!114 &2067564318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067564315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: playfab id
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 55006f1c1f6173043a6e4fc9a8059b9f, type: 2}
-  m_sharedMaterial: {fileID: -5223415700110494042, guid: 55006f1c1f6173043a6e4fc9a8059b9f,
-    type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2071449098
 GameObject:
   m_ObjectHideFlags: 0
@@ -27834,7 +27716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 245, y: -235}
+  m_AnchoredPosition: {x: 885, y: -235}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100645920
@@ -28325,7 +28207,6 @@ MonoBehaviour:
   menu: {fileID: 1141025338}
   menuFade: {fileID: 618749318}
   screenOn: 0
-  pm: {fileID: 1964602098}
   introSkipped: 0
 --- !u!1 &2128772982
 GameObject:
@@ -28858,4 +28739,3 @@ SceneRoots:
   - {fileID: 325739304}
   - {fileID: 230175054}
   - {fileID: 459806424}
-  - {fileID: 1964602099}
