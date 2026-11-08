@@ -41,7 +41,7 @@ public class Grabbable : MonoBehaviourPunCallbacks, IGrabbable
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (interacting)
         {
@@ -49,8 +49,9 @@ public class Grabbable : MonoBehaviourPunCallbacks, IGrabbable
             Vector3 direction = targetPos - transform.position;
             rb.AddForce(direction * force);
 
-            rb.velocity *= dampFactor;
-            rb.angularVelocity *= dampFactor;
+            float fixedDampFactor = Mathf.Pow(dampFactor, Time.fixedDeltaTime * 60f);
+            rb.velocity *= fixedDampFactor;
+            rb.angularVelocity *= fixedDampFactor;
         }
 
         

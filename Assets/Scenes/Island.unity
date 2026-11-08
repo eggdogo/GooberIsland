@@ -3664,7 +3664,7 @@ MonoBehaviour:
   treesPerChunk: 6
   minTreeHeight: 5
   minTreeSpacing: 4
-  raftPrefab: {fileID: 7593315348665093186, guid: 2e665a7c23178574ba00f0c0271654e0,
+  raftPrefab: {fileID: 3989069231722976993, guid: 2e665a7c23178574ba00f0c0271654e0,
     type: 3}
   shoreSearchStep: 8
   shoreThreshold: 0.2
